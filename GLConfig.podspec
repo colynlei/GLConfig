@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "GLConfig"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "工程配置"
   s.description  = <<-DESC 
 		"工程配置：宏定义、自定义view、Frame类别、layerFrame类别、工具类等。"
