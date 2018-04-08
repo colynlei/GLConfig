@@ -63,12 +63,20 @@
 				BC26BDD82078BD7C009F54B4 /* AppDelegate.m */,
 				BC26BDDA2078BD7C009F54B4 /* ViewController.h */,
 				BC26BDDB2078BD7C009F54B4 /* ViewController.m */,
-				BC26BDEF2078BE14009F54B4 /* GLConfig.h */,
+				BC26BDF02079B39F009F54B4 /* GLConfig */,
 				BC26BDDD2078BD7C009F54B4 /* Main.storyboard */,
 				BC26BDE02078BD7D009F54B4 /* Assets.xcassets */,
 				BC26BDE22078BD7D009F54B4 /* LaunchScreen.storyboard */,
 				BC26BDE52078BD7D009F54B4 /* Info.plist */,
 				BC26BDE62078BD7D009F54B4 /* main.m */,
+			);
+			path = GLConfig;
+			sourceTree = "<group>";
+		};
+		BC26BDF02079B39F009F54B4 /* GLConfig */ = {
+			isa = PBXGroup;
+			children = (
+				BC26BDEF2078BE14009F54B4 /* GLConfig.h */,
 			);
 			path = GLConfig;
 			sourceTree = "<group>";
