@@ -26,7 +26,8 @@
 		BC26BDE32078BD7D009F54B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC26BDE52078BD7D009F54B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC26BDE62078BD7D009F54B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BC26BDEF2078BE14009F54B4 /* GLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLConfig.h; sourceTree = "<group>"; };
+		BC26BDEF2078BE14009F54B4 /* GLMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMacro.h; sourceTree = "<group>"; };
+		BC26BDF12079C2E2009F54B4 /* GLConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLConfig.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +60,11 @@
 		BC26BDD62078BD7C009F54B4 /* GLConfig */ = {
 			isa = PBXGroup;
 			children = (
+				BC26BDF02079B39F009F54B4 /* GLConfig */,
 				BC26BDD72078BD7C009F54B4 /* AppDelegate.h */,
 				BC26BDD82078BD7C009F54B4 /* AppDelegate.m */,
 				BC26BDDA2078BD7C009F54B4 /* ViewController.h */,
 				BC26BDDB2078BD7C009F54B4 /* ViewController.m */,
-				BC26BDF02079B39F009F54B4 /* GLConfig */,
 				BC26BDDD2078BD7C009F54B4 /* Main.storyboard */,
 				BC26BDE02078BD7D009F54B4 /* Assets.xcassets */,
 				BC26BDE22078BD7D009F54B4 /* LaunchScreen.storyboard */,
@@ -76,7 +77,8 @@
 		BC26BDF02079B39F009F54B4 /* GLConfig */ = {
 			isa = PBXGroup;
 			children = (
-				BC26BDEF2078BE14009F54B4 /* GLConfig.h */,
+				BC26BDF12079C2E2009F54B4 /* GLConfig.h */,
+				BC26BDEF2078BE14009F54B4 /* GLMacro.h */,
 			);
 			path = GLConfig;
 			sourceTree = "<group>";

@@ -9,11 +9,11 @@
 Pod::Spec.new do |s|
 
   s.name         = "GLConfig"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "工程配置"
   s.description  = <<-DESC 
-		"工程配置：宏定义、自定义view、Frame类别、layerFrame类别、工具类等。"
-		DESC
+			"工程配置：宏定义、自定义view、Frame类别、layerFrame类别、工具类等。" 
+			DESC
   s.homepage     = "https://github.com/colynlei"
   s.license      = "MIT"
   s.author       = { "『国』" => "leiguolinhaoshuai@163.com" }
@@ -22,9 +22,9 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/colynlei/GLConfig.git", :tag => "#{s.version}" }
   s.source_files  = "GLConfig/GLConfig"
-  s.exclude_files = "Classes/Exclude"
+  # s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = "GLConfig/GLConfig.h"
+  # s.public_header_files = "GLConfig/GLConfig2"
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
