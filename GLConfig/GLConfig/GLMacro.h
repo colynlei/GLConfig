@@ -80,12 +80,12 @@
 #define isIpad   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
 //状态栏、导航条、导航栏
-#define kStatusBarHeight kApplication.statusBarFrame.size.height /* 20 */
+#define kStatusBarHeight  kApplication.statusBarFrame.size.height /* 20 */
 #define kTopBarSafeHeight (CGFloat)(kIsIphoneX?(44):(0)) // 顶部安全区域远离高度
 #define kBottomSafeHeight (CGFloat)(kIsIphoneX?(34):(0)) // 底部安全区域远离高度
-#define kTopBarDifHeight (CGFloat)(kIsIphoneX?(24):(0))  // iPhoneX的状态栏高度差值
-#define kNavbarHeight (CGFloat)(64+kTopBarDifHeight)   // 导航套高度
-#define kTabbarHeight (CGFloat)(49+kBottomSafeHeight)    //分栏高度
+#define kTopBarDifHeight  (CGFloat)(kIsIphoneX?(24):(0))  // iPhoneX的状态栏高度差值
+#define kNavbarHeight     (CGFloat)(64+kTopBarDifHeight)   // 导航套高度
+#define kTabbarHeight     (CGFloat)(49+kBottomSafeHeight)    //分栏高度
 
 //判断是真机还是模拟机
 #define isSimulator TARGET_IPHONE_SIMULATOR
@@ -116,7 +116,7 @@ kColorRGBA(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(25
 
 //弱引用
 #define kWeakSelf(type)   __weak typeof(type) weak##type = type;
-#define kStrongSelf(type) __strong typeof(type) type = weak##type;
+#define kStrongSelf(type) __strong typeof(type) strong##type = weak##type;
 
 //字体大小
 #define kFont(size) [UIFont systemFontOfSize:size]

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "GLConfig"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "工程配置"
   s.description  = <<-DESC 
 			"工程配置：宏定义、自定义view、Frame类别、layerFrame类别、工具类等。" 
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   # s.platform     = :ios, "8.0"
 
   s.source       = { :git => "https://github.com/colynlei/GLConfig.git", :tag => "#{s.version}" }
-  s.source_files  = "GLConfig/GLConfig"
+  s.source_files  = "GLConfig/GLConfig/*{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "GLConfig/GLConfig2"
