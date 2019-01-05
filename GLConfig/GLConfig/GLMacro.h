@@ -118,9 +118,18 @@ kColorRGBA(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(25
 #define kWeakSelf(type)   __weak typeof(type) weak##type = type;
 #define kStrongSelf(type) __strong typeof(type) strong##type = weak##type;
 
-//字体大小
-#define kFont(size) [UIFont systemFontOfSize:size]
-#define kFont_bold(size) [UIFont boldSystemFontOfSize:size]
+//字体大小及字重
+#define kFont(size)             [UIFont systemFontOfSize:size]
+//#define kFont_Bold(size)        [UIFont boldSystemFontOfSize:size]
+#define kFont_UltraLight(size)  [UIFont systemFontOfSize:size weight:UIFontWeightUltraLight]
+#define kFont_Thin(size)        [UIFont systemFontOfSize:size weight:UIFontWeightThin]
+#define kFont_Light(size)       [UIFont systemFontOfSize:size weight:UIFontWeightLight]
+#define kFont_Regular(size)     [UIFont systemFontOfSize:size weight:UIFontWeightRegular]
+#define kFont_Medium(size)      [UIFont systemFontOfSize:size weight:UIFontWeightMedium]
+#define kFont_Semibold(size)    [UIFont systemFontOfSize:size weight:UIFontWeightSemibold]
+#define kFont_Bold(size)        [UIFont systemFontOfSize:size weight:UIFontWeightBold]
+#define kFont_Heavy(size)       [UIFont systemFontOfSize:size weight:UIFontWeightHeavy]
+#
 
 //图片
 #define kImage(name) [UIImage imageNamed:name]
