@@ -102,18 +102,6 @@ kColorRGBA(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(25
 //弧度 radian(-360~360)
 #define kRadian(radian) radian*M_PI/180
 
-//开发是打印，发布时不打印
-#if DEBUG
-#define TimeString [dateFormatter stringFromDate:[NSDate date]];
-
-//#define DLog(...) printf("%s %s [Line %d]: %s\n",[[NSString timeString] UTF8String], __PRETTY_FUNCTION__, __LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
-#define DLog(fmt, ...) NSLog((@"%s 33[Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
-#define GLLog(...) printf("%s %s [%d]: %s\n",[[NSString timeString] UTF8String],[NSStringFromClass([self class]) UTF8String],__LINE__,[[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
-#else
-#define DLog(...)
-#define GLLog(...)
-#endif
-
 //弱引用
 #define kWeakSelf(type)   __weak typeof(type) weak##type = type;
 #define kStrongSelf(type) __strong typeof(type) strong##type = weak##type;
@@ -170,6 +158,13 @@ kColorRGBA(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(25
 #define kNetworkActivityIndicatorVisible(bool) \
 [UIApplication sharedApplication].networkActivityIndicatorVisible = bool
 
+#define dispatch_main_async_safe(block)\
+if ([NSThread isMainThread]) {\
+block();\
+} else {\
+dispatch_async(dispatch_get_main_queue(), block);\
+}
+
 //单例
 #define kShareInstance_h( __class ) \
 + (__class *)shareInstance;
@@ -181,6 +176,20 @@ kColorRGBA(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(25
     dispatch_once( &once, ^{ instance = [[__class alloc] init]; } ); \
     return instance; \
 }
+
+//开发是打印，发布时不打印
+#if DEBUG
+//#define TimeString [dateFormatter stringFromDate:[NSDate date]];
+
+//#define DLog(...) printf("%s %s [Line %d]: %s\n",[[NSString timeString] UTF8String], __PRETTY_FUNCTION__, __LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
+#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define GLLog(...) printf("%s %s [%d]: %s\n",[[NSString timeString] UTF8String],[NSStringFromClass([self class]) UTF8String],__LINE__,[[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
+#define NSLog(format, ...) printf("-- %s -- %s --  %s  第%d行\n\t %s\n\n",__DATE__, __TIME__, [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+#else
+#define DLog(...)
+#define GLLog(...)
+#define NSLog(format, ...)
+#endif
 
 
 #endif /* GLMacro_h */
