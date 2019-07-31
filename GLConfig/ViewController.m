@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "GLConfig.h"
+#import "GLConfig/GLMacro.h"
 
 @interface ViewController ()
 
