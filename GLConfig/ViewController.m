@@ -13,6 +13,8 @@
 
 @end
 
+int ss = 4;
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -41,7 +43,36 @@
     NSDateFormatter *f = [[NSDateFormatter alloc] init];
     [[[NSDateFormatter alloc] init] setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
 //    [[[[NSDateFormatter alloc] init] setDateFormat:@"yyyy-MM-dd HH:mm:ss"] stringFromDate:[NSDate date]];
+    
+    [self textMethod];
 
+}
+
+- (void)textMethod {
+    
+    int a = 2;
+//    __block NSString *str = @"ddd";
+    static int b = 2;
+    NSObject *obj = [[NSObject alloc] init]; 
+    NSLog(@"a=%p,str=%p",&a,obj);
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        NSLog(@"a=%p,str=%p",&a,obj);
+//    });
+    
+   // 小码哥：auto，自动变量，局部变量；
+//    mach_o
+    //新浪：底层。
+    
+    void (^block)(void) = ^{
+//        obj = [[NSObject alloc] init];
+        NSLog(@"b=%p",&ss);
+    };
+    
+    
+    
+    NSLog(@"a=%p,str=%p",&a,obj);
+    block();
+    
 }
 
 

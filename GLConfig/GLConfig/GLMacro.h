@@ -191,5 +191,13 @@ dispatch_async(dispatch_get_main_queue(), block);\
 #define NSLog(format, ...)
 #endif
 
+#ifdef DEBUG
+#define HYString [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent
+#define HY_Log(...)  printf("%s: %s 第%d行: %s\n\n",[hy_stringDate UTF8String], [HYString UTF8String] ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String])
+
+#else
+#define HY_Log(...)
+#endif
+
 
 #endif /* GLMacro_h */
